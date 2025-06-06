@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Crypter Test</title>
+    <script src="stringCrypter.js"></script>
+</head>
+<body>
+    <h1>JavaScript String Encryption/Decryption Test</h1>
+    <p>Open your browser's developer console (usually F12) to see the test results from <code>runJsTests()</code>.</p>
+    <p>The <code>stringCrypter.js</code> script is loaded, and <code>runJsTests()</code> is called automatically when the page loads.</p>
+    <button onclick="runJsTests()">Run Tests Again</button>
+    <hr>
+    <h2>Manual Test</h2>
+    <div>
+        <label for="inputText">Text to process:</label>
+        <input type="text" id="inputText" value="Hello World!">
+    </div>
+    <div>
+        <button onclick="manualEncrypt()">Encrypt</button>
+        <button onclick="manualDecrypt()">Decrypt</button>
+    </div>
+    <div>
+        <label for="outputText">Output:</label>
+        <textarea id="outputText" rows="4" cols="50" readonly></textarea>
+    </div>
+
+    <script>
+        // Run tests automatically on load
+        runJsTests();
+
+        function manualEncrypt() {
+            const text = document.getElementById('inputText').value;
+            const encrypted = processString('e', text);
+            document.getElementById('outputText').value = encrypted;
+        }
+
+        function manualDecrypt() {
+            const text = document.getElementById('inputText').value; // Assuming this holds the encrypted text for decryption
+            const decrypted = processString('d', text);
+            document.getElementById('outputText').value = decrypted;
+        }
+    </script>
+</body>
+</html>
