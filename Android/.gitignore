@@ -1,3 +1,9 @@
+/build
+/.cxx
+/.ccls-cache
+/Debug
+/Release
+/.vscode
 *.iml
 .gradle
 /local.properties
@@ -8,7 +14,6 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
-/build
 /captures
 .externalNativeBuild
 .cxx

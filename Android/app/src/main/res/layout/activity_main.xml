@@ -1,87 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:fillViewport="true"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Text to Encrypt/Decrypt:"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/editTextData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:hint="Enter text here"
-        android:inputType="textMultiLine"
-        android:minLines="3"
-        android:gravity="top"
-        android:background="@android:drawable/edit_text" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Secret Key:"
-        android:layout_marginTop="16dp"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/editTextKey"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:hint="Enter secret key"
-        android:inputType="textPassword"
-        android:background="@android:drawable/edit_text" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="24dp">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/buttonEncrypt"
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Encrypt"
-            android:layout_marginEnd="8dp" />
+            android:text="Text to Encrypt/Decrypt:"
+            android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/buttonDecrypt"
-            android:layout_width="0dp"
+        <EditText
+            android:id="@+id/editTextData"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Decrypt"
-            android:layout_marginStart="8dp" />
+            android:layout_marginTop="4dp"
+            android:hint="Enter text here"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:background="@android:drawable/edit_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Secret Key:"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Enter secret key"
+            android:inputType="textPassword"
+            android:background="@android:drawable/edit_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/buttonEncrypt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Encrypt"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/buttonDecrypt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Decrypt"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result:"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:textIsSelectable="true"
+            android:minLines="3"
+            android:gravity="top"
+            android:hint="Result will appear here" />
+
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Result:"
-        android:layout_marginTop="24dp"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/textViewResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:padding="8dp"
-        android:textSize="16sp"
-        android:background="@android:drawable/editbox_background_normal"
-        android:textIsSelectable="true"
-        android:minLines="3"
-        android:gravity="top"
-        android:hint="Result will appear here" />
-
-</LinearLayout>
+</ScrollView>
